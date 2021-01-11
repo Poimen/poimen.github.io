@@ -1,0 +1,29 @@
+{
+  "name": "poimen.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "",
+  "scripts": {
+    "predev": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/base.css",
+    "dev": "serve src",
+    "prepublish": "NODE_ENV=production tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/base.css",
+    "publish": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poimen/poimen.github.io.git"
+  },
+  "author": "Richard Shephard",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Poimen/poimen.github.io/issues"
+  },
+  "homepage": "https://github.com/Poimen/poimen.github.io#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.4",
+    "serve": "^11.3.2",
+    "tailwindcss": "^2.0.2"
+  }
+}
