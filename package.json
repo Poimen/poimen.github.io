@@ -25,5 +25,8 @@
     "postcss": "^8.2.4",
     "serve": "^11.3.2",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
   }
 }
