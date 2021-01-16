@@ -1,5 +1,3 @@
-// TODO : add uglify
-
 (function() {
   window.onscroll = function() {
     const scrollLimit = 30;
