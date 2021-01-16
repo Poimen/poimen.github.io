@@ -12,6 +12,7 @@
     "pub:html": "minify src/index.html > docs/index.html",
     "pub:js": "minify src/index.js > docs/index.js",
     "pub:images": "cp src/assets/hero.jpg docs/assets/.",
+    "pub:cv": "cp src/assets/gitHub_2020_Richard_Shephard_cv.pdf docs/assets/.",
     "publish": "npm-run-all --serial make:docs pub:*",
     "postpublish": "du -h docs"
   },
