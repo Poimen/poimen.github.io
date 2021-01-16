@@ -7,8 +7,13 @@
     "predev": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/base.css",
     "dev": "serve src",
     "prepublish": "NODE_ENV=production tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/base.css",
-    "publish": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "make:docs": "rm -rf docs && mkdir -p docs/assets/styles",
+    "pub:styles": "minify src/assets/styles/base.css > docs/assets/styles/base.css",
+    "pub:html": "minify src/index.html > docs/index.html",
+    "pub:js": "minify src/index.js > docs/index.js",
+    "pub:images": "cp src/assets/hero.jpg docs/assets/.",
+    "publish": "npm-run-all --serial make:docs pub:*",
+    "postpublish": "du -h docs"
   },
   "repository": {
     "type": "git",
@@ -27,6 +32,8 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "eslint": "^7.17.0"
+    "eslint": "^7.17.0",
+    "minify": "^6.0.1",
+    "npm-run-all": "^4.1.5"
   }
 }
