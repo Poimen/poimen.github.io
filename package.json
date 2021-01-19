@@ -13,7 +13,10 @@
     "pub:js": "minify src/index.js > docs/index.js",
     "pub:images": "cp src/assets/hero.jpg docs/assets/.",
     "pub:cv": "cp src/assets/gitHub_2020_Richard_Shephard_cv.pdf docs/assets/.",
-    "publish": "npm-run-all --serial make:docs pub:*",
+    "cacheb:styles": "node tools/cachebust.js ./docs/assets/styles/base.css ./docs/index.html",
+    "cacheb:js": "node tools/cachebust.js ./docs/index.js ./docs/index.html",
+    "cacheb:cv": "node tools/cachebust.js ./docs/assets/gitHub_2020_Richard_Shephard_cv.pdf ./docs/index.html",
+    "publish": "npm-run-all --serial make:docs pub:* cacheb:*",
     "postpublish": "du -h docs"
   },
   "repository": {
