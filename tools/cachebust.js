@@ -27,7 +27,7 @@ function replaceLinkReference(file, oldFilename, newFilename) {
   const newFile = path.basename(newFilename);
 
   let contents = fs.readFileSync(file).toString();
-  contents = contents.replace(oldFile, newFile);
+  contents = contents.replaceAll(oldFile, newFile);
 
   fs.writeFileSync(file, contents);
 }
